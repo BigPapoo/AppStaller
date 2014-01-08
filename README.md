@@ -36,6 +36,9 @@ This fits my needs, no promise it will fit yours, but if it does, I will be glad
 especially if you fix bugs or improve some parts. You can also share ideas, but no promise I
 will have time to improve it any time soon.
 
+##Acknowledgment and Copyrights
+Icons from http://www.tehkseven.net
+
 ##Author
 Gildas Quiniou  
 [Big Papoo Company](http://www.bigpapoo.com) / [Fabulapps Games](http://www.fabulapps.com)  

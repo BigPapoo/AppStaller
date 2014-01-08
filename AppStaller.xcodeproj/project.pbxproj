@@ -14,6 +14,9 @@
 		8E5F56CD187C457200EC4F19 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F56CB187C457200EC4F19 /* MainMenu.xib */; };
 		8E5F56CF187C457200EC4F19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F56CE187C457200EC4F19 /* Images.xcassets */; };
 		8E5F56EC187C514500EC4F19 /* NSFileHandle+Readable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F56EB187C514500EC4F19 /* NSFileHandle+Readable.m */; };
+		8E5F56F5187CE33200EC4F19 /* icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F56F2187CE33200EC4F19 /* icon128.png */; };
+		8E5F56F6187CE33200EC4F19 /* icon16.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F56F3187CE33200EC4F19 /* icon16.png */; };
+		8E5F56F7187CE33200EC4F19 /* icon32.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F56F4187CE33200EC4F19 /* icon32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		8E5F56CE187C457200EC4F19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8E5F56EA187C511F00EC4F19 /* NSFileHandle+Readable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+Readable.h"; sourceTree = "<group>"; };
 		8E5F56EB187C514500EC4F19 /* NSFileHandle+Readable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+Readable.m"; sourceTree = "<group>"; };
+		8E5F56F2187CE33200EC4F19 /* icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon128.png; sourceTree = "<group>"; };
+		8E5F56F3187CE33200EC4F19 /* icon16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon16.png; sourceTree = "<group>"; };
+		8E5F56F4187CE33200EC4F19 /* icon32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon32.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 				8E5F56CB187C457200EC4F19 /* MainMenu.xib */,
 				8E5F56EA187C511F00EC4F19 /* NSFileHandle+Readable.h */,
 				8E5F56EB187C514500EC4F19 /* NSFileHandle+Readable.m */,
+				8E5F56F1187CE33200EC4F19 /* Icons */,
 				8E5F56CE187C457200EC4F19 /* Images.xcassets */,
 				8E5F56BD187C457200EC4F19 /* Supporting Files */,
 			);
@@ -105,6 +112,16 @@
 				8E5F56C4187C457200EC4F19 /* AppStaller-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E5F56F1187CE33200EC4F19 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				8E5F56F2187CE33200EC4F19 /* icon128.png */,
+				8E5F56F3187CE33200EC4F19 /* icon16.png */,
+				8E5F56F4187CE33200EC4F19 /* icon32.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,8 +178,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E5F56C1187C457200EC4F19 /* InfoPlist.strings in Resources */,
+				8E5F56F7187CE33200EC4F19 /* icon32.png in Resources */,
 				8E5F56CF187C457200EC4F19 /* Images.xcassets in Resources */,
+				8E5F56F5187CE33200EC4F19 /* icon128.png in Resources */,
 				8E5F56CD187C457200EC4F19 /* MainMenu.xib in Resources */,
+				8E5F56F6187CE33200EC4F19 /* icon16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
