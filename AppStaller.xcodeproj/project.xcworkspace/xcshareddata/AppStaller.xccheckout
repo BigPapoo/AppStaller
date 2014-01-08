@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FC66C267-6C49-449B-A720-A0D5CBC49C9C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AppStaller</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B6CC570F-5346-476F-8A0F-21EA5145F47E</key>
+		<string>https://github.com/BigPapoo/AppStaller.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AppStaller.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B6CC570F-5346-476F-8A0F-21EA5145F47E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/BigPapoo/AppStaller.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B6CC570F-5346-476F-8A0F-21EA5145F47E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B6CC570F-5346-476F-8A0F-21EA5145F47E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AppStaller</string>
+		</dict>
+	</array>
+</dict>
+</plist>
