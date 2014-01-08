@@ -680,10 +680,8 @@
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xRN-fC-HkL">
                         <rect key="frame" x="76" y="251" width="329" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="FQl-1R-T6t">
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="A humble replacement for Mavericks broken iPhone Utility App Installer" id="FQl-1R-T6t">
                             <font key="font" metaFont="system"/>
-                            <string key="title">A Quick and Dirty replacement for
-Mavericks broken iPhone Utility App Installer</string>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -712,9 +710,9 @@ Mavericks broken iPhone Utility App Installer</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgw-vR-sgx">
-                        <rect key="frame" x="41" y="80" width="399" height="17"/>
+                        <rect key="frame" x="41" y="82" width="399" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="jOM-o7-l7j">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="&lt;click GO to reveal the URL>" id="jOM-o7-l7j">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

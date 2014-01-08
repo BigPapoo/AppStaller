@@ -9,6 +9,9 @@
 #import "BPPAppDelegate.h"
 #import "NSFileHandle+Readable.h"
 
+#define BPP_WEB_PORT																					8000
+#define BPP_PYTHON																					@"/usr/bin/python"
+
 @interface BPPAppDelegate()
 	@property (nonatomic, retain) NSFileHandle												*fdStdout;
 	@property (nonatomic, retain) NSTask														*task;
@@ -56,7 +59,7 @@
 		}
 	}
 
-	[self.txtUrl setStringValue:[NSString stringWithFormat:@"http://%@:8000", anIp]];
+	[self.txtUrl setStringValue:[NSString stringWithFormat:@"http://%@:%d", anIp, BPP_WEB_PORT]];
 
 	aString = [NSMutableString stringWithString:@"<html><head></head><body>\n"];
 
@@ -75,7 +78,7 @@
 		{
 			NSLog(@"IPA: %@", aFile);
 			fileName = [aFile substringToIndex:aRange.length - 4];
-			[aString appendFormat:@"<a href=\"itms-services://?action=download-manifest&url=http://%@:8000/%@.plist\">%@</a><br />\n", anIp, fileName, fileName];
+			[aString appendFormat:@"<a href=\"itms-services://?action=download-manifest&url=http://%@:%d/%@.plist\">%@</a><br />\n", anIp, BPP_WEB_PORT, fileName, fileName];
 			aDict = [NSMutableDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/%@.plist", path, fileName]];
 			if (aDict != nil)
 			{
@@ -89,7 +92,7 @@
 						([[anObj objectForKey:@"assets"] count] > 0))
 					{
 						anObj = [[anObj objectForKey:@"assets"] objectAtIndex:0];
-						[anObj setObject:[NSString stringWithFormat:@"http://%@:8000/%@.ipa", anIp, fileName] forKey:@"url"];
+						[anObj setObject:[NSString stringWithFormat:@"http://%@:%d/%@.ipa", anIp, BPP_WEB_PORT, fileName] forKey:@"url"];
 					}
 					anObj = [[aDict objectForKey:@"items"] objectAtIndex:0];
 					if ([[anObj objectForKey:@"metadata"] isKindOfClass:[NSDictionary class]])
@@ -109,8 +112,8 @@
 							attributes:nil];
 
 	self.task = [[NSTask alloc] init];
-	[task setLaunchPath:@"/usr/bin/python"];
-	[task setArguments:[NSArray arrayWithObjects:@"-m", @"SimpleHTTPServer", @"8000", nil]];
+	[task setLaunchPath:BPP_PYTHON];
+	[task setArguments:[NSArray arrayWithObjects:@"-m", @"SimpleHTTPServer", [NSString stringWithFormat:@"%d", BPP_WEB_PORT], nil]];
 
 	NSPipe *outPipe;
 	outPipe = [NSPipe pipe];
