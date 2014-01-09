@@ -11,6 +11,7 @@
 
 #define BPP_WEB_PORT																					8000
 #define BPP_PYTHON																					@"/usr/bin/python"
+#define BPP_ZIP																						@"/usr/bin/zip"
 
 @interface BPPAppDelegate()
 	@property (nonatomic, retain) NSFileHandle												*fdStdout;
@@ -59,7 +60,7 @@
 		}
 	}
 
-	[self.txtUrl setStringValue:[NSString stringWithFormat:@"http://%@:%d", anIp, BPP_WEB_PORT]];
+	[self.txtUrl setStringValue:@"...wait..."];
 
 	aString = [NSMutableString stringWithString:@"<html><head></head><body>\n"];
 
@@ -70,6 +71,34 @@
 	[[NSFileManager defaultManager] changeCurrentDirectoryPath:path];
 
 	NSLog(@"WorkDir=%@", [[NSFileManager defaultManager] currentDirectoryPath]);
+
+	// Create ipa from Payload
+	for (NSString *aFile in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil])
+	{
+		NSTask	*aTask;
+
+		if ([aFile isEqualToString:@"AppStaller.app"])
+			continue;
+		aRange = [aFile rangeOfString:@".*\\.app" options:NSRegularExpressionSearch];
+		if (aRange.location != NSNotFound)
+		{
+			fileName = [aFile substringToIndex:aRange.length - 4];
+			NSLog(@"Creating %@.ipa", fileName);
+			NSLog(@"Remove directory %@", [path stringByAppendingString:@"/Payload"]);
+			[[NSFileManager defaultManager] removeItemAtPath:[path stringByAppendingString:@"/Payload"] error:NULL];
+			NSLog(@"Create directory %@", [path stringByAppendingString:@"/Payload"]);
+			[[NSFileManager defaultManager] createDirectoryAtPath:[path stringByAppendingString:@"/Payload"] withIntermediateDirectories:NO attributes:nil error:NULL];
+			NSLog(@"Copy file %@ to directory %@", [NSString stringWithFormat:@"%@/%@", path, aFile], [NSString stringWithFormat:@"%@/Payload/%@", path, aFile]);
+			[[NSFileManager defaultManager] copyItemAtPath:[NSString stringWithFormat:@"%@/%@", path, aFile] toPath:[NSString stringWithFormat:@"%@/Payload/%@", path, aFile] error:NULL];
+			aTask = [[NSTask alloc] init];
+			[aTask setLaunchPath:BPP_ZIP];
+			[aTask setArguments:[NSArray arrayWithObjects:@"--exclude", @".DS_Store", @"-r", [fileName stringByAppendingString:@".ipa"], @"Payload", nil]];
+			[aTask launch];
+			[aTask waitUntilExit];
+			NSLog(@"Remove directory %@", [path stringByAppendingString:@"/Payload"]);
+			[[NSFileManager defaultManager] removeItemAtPath:[path stringByAppendingString:@"/Payload"] error:NULL];
+		}
+	}
 
 	for (NSString *aFile in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil])
 	{
@@ -127,6 +156,8 @@
                                                object:nil];    
 
 	[self.task launch];
+
+	[self.txtUrl setStringValue:[NSString stringWithFormat:@"http://%@:%d", anIp, BPP_WEB_PORT]];
 }
 
 - (void)commandNotification:(NSNotification *)notification
