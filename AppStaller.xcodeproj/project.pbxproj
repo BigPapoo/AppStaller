@@ -17,6 +17,8 @@
 		8E5F56F5187CE33200EC4F19 /* icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F56F2187CE33200EC4F19 /* icon128.png */; };
 		8E5F56F6187CE33200EC4F19 /* icon16.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F56F3187CE33200EC4F19 /* icon16.png */; };
 		8E5F56F7187CE33200EC4F19 /* icon32.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F56F4187CE33200EC4F19 /* icon32.png */; };
+		8EC9903818CF7C0400816F9E /* SimpleSecureHTTPServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9903718CF7C0400816F9E /* SimpleSecureHTTPServer.py */; };
+		8EC9903A18CF818500816F9E /* prep_cert in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9903918CF818500816F9E /* prep_cert */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		8E5F56F2187CE33200EC4F19 /* icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon128.png; sourceTree = "<group>"; };
 		8E5F56F3187CE33200EC4F19 /* icon16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon16.png; sourceTree = "<group>"; };
 		8E5F56F4187CE33200EC4F19 /* icon32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon32.png; sourceTree = "<group>"; };
+		8EC9903718CF7C0400816F9E /* SimpleSecureHTTPServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = SimpleSecureHTTPServer.py; sourceTree = SOURCE_ROOT; };
+		8EC9903918CF818500816F9E /* prep_cert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = prep_cert; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		8E5F56BD187C457200EC4F19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EC9903718CF7C0400816F9E /* SimpleSecureHTTPServer.py */,
+				8EC9903918CF818500816F9E /* prep_cert */,
 				8E5F56BE187C457200EC4F19 /* AppStaller-Info.plist */,
 				8E5F56BF187C457200EC4F19 /* InfoPlist.strings */,
 				8E5F56C2187C457200EC4F19 /* main.m */,
@@ -182,7 +188,9 @@
 				8E5F56CF187C457200EC4F19 /* Images.xcassets in Resources */,
 				8E5F56F5187CE33200EC4F19 /* icon128.png in Resources */,
 				8E5F56CD187C457200EC4F19 /* MainMenu.xib in Resources */,
+				8EC9903A18CF818500816F9E /* prep_cert in Resources */,
 				8E5F56F6187CE33200EC4F19 /* icon16.png in Resources */,
+				8EC9903818CF7C0400816F9E /* SimpleSecureHTTPServer.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
