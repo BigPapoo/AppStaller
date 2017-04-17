@@ -1,21 +1,21 @@
-#AppStaller
+# AppStaller
 
-##What is it for
+## What is it for
 This is a humble replacement of the Apple’s iPhone Utility for installing Adhoc apps on iOS devices OTA (Over The Air).  
 iPhone Utility is broken (at least for the app installation feature) when ran on OS X Mavericks.
 
-##What's New
-###V1.1
+## What's New
+### V1.1
 Added HTTPS support required with iOS 7.1+ (Also works with older versions)
 
-##Requirements
+## Requirements
 * Python located at `/usr/bin/python` (which should be the default on OS X, can be changed in source code)
 * No need for Apache or any other web server, it’s python that will do the trick
 * OpenSSL
 * Free TCP port 8000 (can be changed in source code and Python script)
 * Fixed IP highly recommended (due to SSL certificate)
 
-##Usage
+## Usage
 I won’t go through the steps required to build Adhoc ipa files, many tutos are available on the Web.  
 If don’t feel comfortable with Adhoc, ipa, Organizer etc., chances are that this tool is not useful for you.  
 Steps you will need to export your ipa file:
@@ -33,7 +33,7 @@ the URL displayed in AppStaller. Wait for the install to complete and then quit 
 Of course, only devices listed in the adhoc provisioning profile can install the app unless you
 are using an Enterprise provisioning profile.
 
-#####Regarding SSL (HTTPS)
+##### Regarding SSL (HTTPS)
 Since iOS7.1, OTA installations can only be done through HTTPS connections.
 
 You will need 2 more initial (done once) steps to do so. AppStaller will prepare all the stuff for you when you first launch it, a message will show you where to find the related file:
@@ -44,11 +44,11 @@ You will need 2 more initial (done once) steps to do so. AppStaller will prepare
 If you own an official SSL certificate you can use it of course, but this is out of the scope of this doc, and you probably know how to install and use it (hint: filename is "server.pem"). With such a certificate you won't get any warning from your device.
 
 
-##Known bugs and subtleties
+## Known bugs and subtleties
 If AppStaller dies or you kill it, the Python process may still be running and will prevent it to run
 again later on, so kill it from the Activity Monitor if this happens.
 
-##Synchronizing big .ipa files over Cloud services like Dropbox
+## Synchronizing big .ipa files over Cloud services like Dropbox
 Adhoc .ipa files are simply .zip files. Due to the compressed nature of zip files, they perform poorly
 with Cloud synchronization. In most cases, 99% of the file need to be sent each time even if only a
 small part of the files contained in the archive have been really modified.
@@ -66,17 +66,17 @@ AppStaller will then repack a working .ipa archive for you. He then follows the 
 installation on the device. Btw, no need to have any certificate neither any provisioning profile as
 long as the app file received in Dropbox is kept untouched. Hope this will save your time as it saves mine!
 
-##Disclaimers
+## Disclaimers
 This fits my needs, no promise it will fit yours, but if it does, I will be glad to hear from you
 especially if you fix bugs or improve some parts. You can also share ideas, but no promise I
 will have time to improve it any time soon.
 
-##Acknowledgment and Copyrights
+## Acknowledgment and Copyrights
 Icons from [http://www.tehkseven.net](http://www.tehkseven.net)
 
 Python HTTPS from [Dennis Plögers Website](http://dennis.dieploegers.de/doku.php/my2cents/creating_a_ssl_http_server_in_python)
 
-##Author
+## Author
 Gildas Quiniou  
 [Big Papoo Company](http://www.bigpapoo.com) / [Fabulapps Games](http://www.fabulapps.com)  
 [gildas@bigpapoo.com](mailto:gildas@bigpapoo.com)
